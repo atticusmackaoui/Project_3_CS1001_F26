@@ -155,7 +155,7 @@ def education_greater_than(counties: list[data.CountyDemographics], key: str, th
 
     filtered_counties = []
     for county in counties:
-        if key in county and county.education[key] > threshold:
+        if county.education[key] > threshold:
             filtered_counties.append(county)
             
     return filtered_counties
@@ -173,7 +173,7 @@ def education_less_than(counties: list[data.CountyDemographics], key: str, thres
 
     filtered_counties = []
     for county in counties:
-        if key in county and county.education[key] < threshold:
+        if county.education[key] < threshold:
             filtered_counties.append(county)
             
     return filtered_counties
@@ -191,7 +191,7 @@ def ethnicity_greater_than(counties: list[data.CountyDemographics], key: str, th
 
     filtered_counties = []
     for county in counties:
-        if key in county and county.ethnicities[key] > threshold:
+        if county.ethnicities[key] > threshold:
             filtered_counties.append(county)
             
     return filtered_counties
@@ -209,7 +209,7 @@ def ethnicity_less_than(counties: list[data.CountyDemographics], key: str, thres
 
     filtered_counties = []
     for county in counties:
-        if key in county and county.ethnicities[key] < threshold:
+        if county.ethnicities[key] < threshold:
             filtered_counties.append(county)
 
     return filtered_counties
